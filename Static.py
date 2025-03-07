@@ -10,7 +10,7 @@ print(Python.staticVariable)
 instance = Python()
 print(instance.staticVariable) 
 
-#Change within an instance
+
 instance.staticVariable = 15
 print(instance.staticVariable) 
 print(Python.staticVariable) 
