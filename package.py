@@ -1,6 +1,4 @@
-# Defining a package-like structure inside a single file
 
-# ClassOne Definition
 class ClassOne:
     def __init__(self):
         print("ClassOne Constructor Called")
@@ -8,7 +6,7 @@ class ClassOne:
     def display(self):
         print("Method from ClassOne")
 
-# ClassTwo Definition
+
 class ClassTwo:
     def __init__(self):
         print("ClassTwo Constructor Called")
