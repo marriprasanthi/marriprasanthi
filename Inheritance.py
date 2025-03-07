@@ -1,27 +1,28 @@
-class A():  
-    def display(dp):
-        print("Display Inside class A ")
+class Senior():  
+    def display(self):
+        print("Display inside Senior class")
  
     def show(self):
-        print("Show Inside class A")
+        print("Show inside Senior class")
      
-class B (A): 
-    def print(pt):
-        print("Print Inside class B")    
+class Manager(Senior): 
+    def print_info(self):
+        print("Print inside Manager class")    
 
     def show(self):
-        print("Show Inside class B")
+        print("Show inside Manager class")
     
  
-class C (B): 
-          
-    
+class Director(Manager): 
     def show(self):
-        print("Show Inside class C ")         
+        print("Show inside Director class")         
 
-s = A()
-s.display()
-k= B()
-k.print()
-g = C()   
-g.show()
+
+senior_obj = Senior()
+senior_obj.display()
+
+manager_obj = Manager()
+manager_obj.print_info()
+
+director_obj = Director()   
+director_obj.show()
