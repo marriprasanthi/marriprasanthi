@@ -1,29 +1,31 @@
-a = [1, 2, 3]
+senior_ages = [65, 70, 75]
 try:
-    print ("Second element = ",a[1])
- 
-    # Throws error since there are only 3 elements in array
-    print ("Fourth element = ",a[3])
+    print("Second senior's age:", senior_ages[1])
     
+    print("Fourth senior's age:", senior_ages[3])
+
 except:
-    print ("An error occurred")
+    print("An error occurred: Index out of range")
 
 print()
 
-b = [3,2,1]
+
+group_one = [75, 70, 65]
+group_two = [65, 70, 75]
+
 try:
-    a == b
+    group_one == group_two  
 except:
-    print("They are not equal")
+    print("The groups are not equal")
 else:
-    print("Both Equal") 
+    print("Both groups are equal")
 
 print()
 
 try:
-    k = 5/0
-    print(k)
+    retirement_fund = 100000 / 0
+    print(retirement_fund)
 except ZeroDivisionError:
-    print("Can't divide by zero")
+    print("Error: Can't divide by zero")
 finally:
-    print('This is always executed')                 
+    print("This block always executes")  
