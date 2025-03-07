@@ -1,58 +1,63 @@
-from unicodedata import name
 
-
-class A:
+   class Person:
     def __init__(self):
-     self.name = "PRASANTHI"
-    def print_A(self):
-        print(self.name)
-obj = A()
-obj.print_A()
+        self.name = "ARJUN" 
 
-class B(A):
+    def print_person(self):
+        print("Class Person Name:", self.name)
+
+class Employee(Person):
     def __init__(self):
-     self.name = "KG"
-    def print_B(self):
-        print(self.name)
-obj1 = B()
-obj1.print_B()
+        super().__init__() 
+        self.name = "RAHUL"  
 
-class C:
+    def print_employee(self):
+        print("Class Employee Name:", self.name)
+
+
+objPerson = Person()
+objPerson.print_person()
+
+objEmployee = Employee()
+objEmployee.print_employee()
+
+
+
+class Student:
     name = None
+    _roll = None  
+    __course = None  
 
-    _roll = None 
-
-    __branch = None
-
-    def __init__(self,name,roll,branch):
+    def __init__(self, name, roll, course):
         self.name = name  
-        self._roll = roll
-        self.__branch = branch  
-    def dsiplayName(self):
-        print("Name:",self.name)
-    
-    def _displayRoll(self):
-    
-        print("Roll:",self._roll)
+        self._roll = roll 
+        self.__course = course  
 
-        
-    def __displayBranch(self):
-        print("Branch:",self.__branch)
+    def displayName(self):  
+        print("Name:", self.name)
 
-        
-    def access__displayBranch(self):     
-          
-        self.__displayBranch()
+    def _displayRoll(self): 
+        print("Roll:", self._roll)
 
-class D(C):
-    def __init__(self,name, roll, branch):
-        super().__init__(name,roll, branch)
-    
-    def access_displayRoll(self):            
-        
+    def __displayCourse(self): 
+        print("Course:", self.__course)
+
+    def access_displayCourse(self):  
+        self.__displayCourse()
+
+
+
+class Graduate(Student):
+    def __init__(self, name, roll, course):
+        super().__init__(name, roll, course)
+
+    def access_displayRoll(self):  
         self._displayRoll()
-obj = D("Kashish", 7 , "bsc")
 
-obj.dsiplayName()
-obj.access_displayRoll()
-obj.access__displayBranch()      
+
+objGraduate = Graduate("VIKRAM", 10, "Computer Science")
+
+
+objGraduate.displayName()  
+objGraduate.access_displayRoll() 
+objGraduate.access_displayCourse()  
