@@ -1,40 +1,45 @@
 from abc import ABC, abstractmethod
  
-class Polygon(ABC): 
+class Vehicle(ABC):  # Base class / Superclass
  
     @abstractmethod
-    def noofsides(self):
+    def number_of_wheels(self):
         pass
  
-class Triangle(Polygon): 
+class Bicycle(Vehicle):  # Subclass
  
-
-    def noofsides(self):
-        print("Triangle: I have 3 sides")
+    # Overriding abstract method
+    def number_of_wheels(self):
+        print("Bicycle: I have 2 wheels")
  
-class Pentagon(Polygon): 
+class Car(Vehicle):  # Subclass
  
-    def noofsides(self):
-        print("Pentagon: I have 5 sides")
+    # Overriding abstract method
+    def number_of_wheels(self):
+        print("Car: I have 4 wheels")
  
-class Hexagon(Polygon): 
-    def noofsides(self):
-        print("Hexagon: I have 6 sides")
+class Truck(Vehicle):  # Subclass
  
-class Quadrilateral(Polygon): 
+    # Overriding abstract method
+    def number_of_wheels(self):
+        print("Truck: I have 6 wheels")
  
-    def noofsides(self):
-        print("Quadrilateral: I have 4 sides")
+class Motorcycle(Vehicle):  # Subclass
  
-
-R = Triangle()
-R.noofsides()
+    # Overriding abstract method
+    def number_of_wheels(self):
+        print("Motorcycle: I have 2 wheels")
  
-K = Quadrilateral()
-K.noofsides()
+# Driver code
+# Creating the objects to call the abstract method.
+obj1 = Bicycle()
+obj1.number_of_wheels()
  
-R = Pentagon()
-R.noofsides()
+obj2 = Car()
+obj2.number_of_wheels()
  
-K = Hexagon()
-K.noofsides()
+obj3 = Truck()
+obj3.number_of_wheels()
+ 
+obj4 = Motorcycle()
+obj4.number_of_wheels()
