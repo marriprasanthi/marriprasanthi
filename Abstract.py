@@ -1,37 +1,36 @@
 from abc import ABC, abstractmethod
  
-class Vehicle(ABC):  # Base class / Superclass
+class Vehicle(ABC):  
  
     @abstractmethod
     def number_of_wheels(self):
         pass
  
-class Bicycle(Vehicle):  # Subclass
+class Bicycle(Vehicle):  
  
-    # Overriding abstract method
+   
     def number_of_wheels(self):
         print("Bicycle: I have 2 wheels")
  
-class Car(Vehicle):  # Subclass
+class Car(Vehicle):  
  
-    # Overriding abstract method
+  
     def number_of_wheels(self):
         print("Car: I have 4 wheels")
  
-class Truck(Vehicle):  # Subclass
+class Truck(Vehicle): 
  
-    # Overriding abstract method
+ 
     def number_of_wheels(self):
         print("Truck: I have 6 wheels")
  
-class Motorcycle(Vehicle):  # Subclass
+class Motorcycle(Vehicle): 
  
-    # Overriding abstract method
+ 
     def number_of_wheels(self):
         print("Motorcycle: I have 2 wheels")
  
-# Driver code
-# Creating the objects to call the abstract method.
+
 obj1 = Bicycle()
 obj1.number_of_wheels()
  
